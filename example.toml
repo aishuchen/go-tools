@@ -1,0 +1,43 @@
+env = "test"
+
+[rabbitmq]
+[rabbitmq.options]
+dsn = "amqp://guest:guest@10.0.5.174:5672//"
+reconnect_delay = 3 # 非必需
+reconnect_times = 5 # 非必需
+
+[[rabbitmq.consumers]]
+[rabbitmq.consumers.config]
+name = "my-consumer" # 非必需，默认使用队列名作为消费者名
+auto_ack = false  # 非必需, 默认 false
+prefetch_count = 1  # 非必需, 默认 1
+prefetch_size = 0 # 非必需, 默认 0
+
+[rabbitmq.consumers.config.queue]
+name = "my-queue"
+durable = true # 非必需, 默认 true
+
+[[rabbitmq.publishers]]
+[rabbitmq.publishers.config]
+routing_key = "my-routingkey"
+[rabbitmq.publishers.config.exchange]
+name = "my-exchange"
+type = "direct" # 非必需, 默认 direct
+durable = true  # 非必需, 默认 true
+[rabbitmq.publishers.config.queue] # 非必需，如果存在，则会自动绑定队列
+name = "consume_queue"
+durable = true # 非必需, 默认 true
+
+
+[aws]
+access_key = ""
+secret_key = ""
+region = "cn-northwest-1"
+
+
+[s3]
+endpoint_url = ""  # 如果是 aws 官方服务, 此项一定置空; 如果是自建服务, 此项必填
+bucket = ""
+use_path_style = false
+bucket_acl = ""
+object_acl = ""
