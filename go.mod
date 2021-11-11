@@ -1,4 +1,4 @@
-module gitlab.hypers.com/server-go/tools
+module github.com/aishuchen/go-tools
 
 go 1.16
 
