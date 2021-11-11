@@ -2,13 +2,14 @@ package rabbitmq
 
 import (
 	"fmt"
-	"github.com/spf13/viper"
-	"github.com/streadway/amqp"
-	"gitlab.hypers.com/server-go/tools/config"
-	"gitlab.hypers.com/server-go/tools/internal"
 	"sync"
 	"testing"
 	"time"
+
+	"github.com/aishuchen/go-tools/config"
+	"github.com/aishuchen/go-tools/internal"
+	"github.com/spf13/viper"
+	"github.com/streadway/amqp"
 )
 
 func TestNewFromViper(t *testing.T) {
@@ -85,5 +86,4 @@ func TestRabbitMQ_Publish_Consume(t *testing.T) {
 	if err := mq.Close(); err != nil {
 		t.Fatal(err)
 	}
-
 }

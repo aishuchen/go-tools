@@ -1,4 +1,4 @@
-module gitlab.hypers.com/server-go/tools/logging
+module github.com/aishuchen/go-tools/logging
 
 go 1.16
 

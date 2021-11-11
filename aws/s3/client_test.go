@@ -7,10 +7,10 @@ import (
 	"testing"
 	"time"
 
+	"github.com/aishuchen/go-tools/aws/common"
+	"github.com/aishuchen/go-tools/config"
+	"github.com/aishuchen/go-tools/internal"
 	"github.com/spf13/viper"
-	"gitlab.hypers.com/server-go/tools/aws/common"
-	"gitlab.hypers.com/server-go/tools/config"
-	"gitlab.hypers.com/server-go/tools/internal"
 )
 
 var ctx = context.Background()

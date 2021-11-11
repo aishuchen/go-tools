@@ -1,3 +1,3 @@
-module gitlab.hypers.com/server-go/tools/internal
+module github.com/aishuchen/go-tools/internal
 
 go 1.16

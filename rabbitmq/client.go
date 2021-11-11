@@ -2,13 +2,14 @@ package rabbitmq
 
 import (
 	"fmt"
-	"github.com/streadway/amqp"
-	"gitlab.hypers.com/server-go/tools/logging"
 	"os"
 	"os/signal"
 	"sync"
 	"syscall"
 	"time"
+
+	"github.com/aishuchen/go-tools/logging"
+	"github.com/streadway/amqp"
 )
 
 var logger = logging.DefaultLogger

@@ -1,4 +1,4 @@
-module gitlab.hypers.com/server-go/tools/s3
+module github.com/aishuchen/go-tools/s3
 
 go 1.16
 

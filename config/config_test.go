@@ -1,10 +1,11 @@
 package config
 
 import (
-	"github.com/spf13/viper"
-	"gitlab.hypers.com/server-go/tools/internal"
 	"os"
 	"testing"
+
+	"github.com/aishuchen/go-tools/internal"
+	"github.com/spf13/viper"
 )
 
 var configFilePath = internal.GetTestConfigFile()
